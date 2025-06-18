@@ -1,0 +1,57 @@
+.relative {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px; /* optional for rounded corners */
+  }
+  
+  .absolute {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+  
+  .flex {
+    display: flex;
+  }
+  
+  .items-center {
+    align-items: center;
+  }
+  
+  .justify-center {
+    justify-content: center;
+  }
+  
+  .text-center {
+    text-align: center;
+  }
+  
+  .bg-overlay {
+    background-color: rgba(0, 0, 0, 0.4); /* semi-transparent black */
+  }
+  
+  .px-4 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  .text-white {
+    color: #ffffff;
+  }
+  
+  .text-xl {
+    font-size: 1.25rem;
+  }
+  
+  .font-semibold {
+    font-weight: 600;
+  }
+  
+  .mb-2 {
+    margin-bottom: 0.5rem;
+  }
+  
+  
+  
