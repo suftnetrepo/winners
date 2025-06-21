@@ -20,7 +20,7 @@ export default function Page() {
           navOtherClass="navbar-other ms-lg-4"
           navClassName="navbar navbar-expand-lg classic transparent navbar-light"
           button={
-            <Link href="/login" className="btn btn-sm btn-danger rounded-pill">
+            <Link href="/give" className="btn btn-sm btn-danger rounded-pill">
               Give
             </Link>
           }
@@ -89,7 +89,7 @@ export default function Page() {
         </div>
       </main>
 
-      <Footer />
+      <Footer backgroundColor='bg-gray'  />
     </Fragment>
   );
 }

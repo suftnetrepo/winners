@@ -1,11 +1,23 @@
 'use client';
 
+import { NextPage } from 'next';
 import { Fragment } from 'react';
+// -------- custom component -------- //
+import Team from '@/components/blocks/team/Team';
+import Target from '@/icons/lineal/Target';
+import AwardTwo from '@/icons/lineal/AwardTwo';
+
 import { Footer } from '@/components/blocks/footer';
+import FigureImage from '@/components/reuseable/FigureImage';
+import NextLink from '@/components/reuseable/links/NextLink';
+import NavBarLink from '@/components/reuseable/links/NavbarLink';
+import AboutUs from '@/components/blocks/about';
 import PageProgress from '@/components/common/PageProgress';
+import Topbar from '@/components/elements/Topbar';
 import Navbar from '@/components/blocks/navbar/Navbar';
 import Link from 'next/link';
-import Testimonial from '@/components/blocks/testimonies';
+import AccordionList from '@/components/common/AccordionList';
+import { GivingSteps } from '@/components/blocks/steps';
 
 export default function Page() {
   return (
@@ -18,11 +30,6 @@ export default function Page() {
           info
           navOtherClass="navbar-other ms-lg-4"
           navClassName="navbar navbar-expand-lg classic transparent navbar-light"
-          button={
-            <Link href="/give" className="btn btn-sm btn-danger rounded-pill">
-              Give
-            </Link>
-          }
         />
       </header>
 
@@ -33,21 +40,19 @@ export default function Page() {
             <div className="container py-13 py-md-13 text-center">
               <div className="row">
                 <div className="col-lg-10 col-xxl-8 mx-auto">
-                  <h3 className="display-4 mb-3 text-center">Celebrate the Goodness of God</h3>
+                  <h3 className="display-4 mb-3 text-center">Covenant of Blessing</h3>
                   <p className="lead fs-lg mb-10 text-center">
-                    Read and share testimonies that reveal God's love, power, and faithfulness.
+                    When you give your tithe and offering, you unlock Kingdom blessings — prepare for divine provision.
                   </p>
                 </div>
               </div>
             </div>
           </div>
         </section>
-        <div className="container pt-10 pt-md-14 pb-13 pb-md-15 mb-8">
-          <Testimonial />
-        </div>
+        <GivingSteps />
       </main>
 
-      <Footer backgroundColor='bg-gray' />
+      <Footer backgroundColor="bg-gray" />
     </Fragment>
   );
 }

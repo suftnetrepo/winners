@@ -27,11 +27,7 @@ const Home: NextPage = () => {
           stickyBox={false}
           logoAlt="logo-light"
           navClassName="navbar navbar-expand-lg center-nav transparent position-absolute navbar-dark caret-none"
-          button={
-            <Link href="/login" className="btn btn-sm btn-danger rounded-pill">
-              Give
-            </Link>
-          }
+        
         />
       </header>
 

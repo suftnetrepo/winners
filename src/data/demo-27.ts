@@ -1,5 +1,5 @@
 import Shield from "@/icons/lineal/Shield";
-import Design from "@/icons/lineal/Design";
+import Email from "@/icons/lineal/Email";
 import Target from "@/icons/lineal/Target";
 import Wallet from "@/icons/lineal/Wallet";
 import Loyalty from "@/icons/lineal/Loyalty";
@@ -16,6 +16,7 @@ import SmartphoneTwo from "@/icons/lineal/SmartphoneTwo";
 import CloudComputingTwo from "@/icons/lineal/CloudComputingTwo";
 import Settings from "@/icons/lineal/Settings";
 import color from "@/utils/color";
+import ShoppingBasket from "@/icons/lineal/ShoppingBasket";
 
 const serviceList = [
 	{
@@ -62,36 +63,87 @@ const serviceList = [
 	},
   ];
 
-// const processList = [
-// 	{
-// 		id: 1,
-// 		Icon: Browser,
-// 		title: " Choose a Plan",
-// 		description:
-// 			"Select a pricing plan that fits your team size, project needs, and budget.",
-// 	},
-// 	{
-// 		id: 2,
-// 		Icon: IdCard,
-// 		title: "Sign Up and Payment",
-// 		description:
-// 			"Register your account with basic details and complete the secure payment process.",
-// 	},
-// 	{
-// 		id: 3,
-// 		Icon: ChatTwo,
-// 		title: "Account Activation",
-// 		description:
-// 			"Receive a confirmation email with login details for immediate access.",
-// 	},
-// 	{
-// 		id: 4,
-// 		Icon: Settings,
-// 		title: "Setup Your Workspace",
-// 		description:
-// 			"Log in, personalize your workspace, invite team members, and configure tools.",
-// 	},
-// ];
+const donations = [
+	{
+		id: 1,
+		Icon: ShoppingBasket,
+		title: "Bring essential non-perishable food items",
+		description:
+			"such as (rice, pasta, tinned foods, cereals, toiletries, etc.) directly to the church.",
+	},
+	{
+		id: 2,
+		Icon: IdCard,
+		title: "Or give financially ",
+		description:
+			"please speak to any church official or contact us via 07888 230 650 or 07776 696 504 to arrange your donation.",
+	}
+	
+];
+
+const givingList = [
+	{
+		id: 1,
+		Icon: CloudComputingTwo,
+		title: "Give online",
+		description:
+			"via the Tithe.ly app or website. It’s quick, easy, and secure.",
+	},
+	{
+		id: 2,
+		Icon: Wallet,
+		title: "Write a cheque",
+		description:
+			"to World Mission Agency – Winners Chapel International.",
+	},
+	{
+		id: 2,
+		Icon: Email,
+		title: "Use a giving envelope",
+		description:
+			"during any of our services. You can find these at the back of the church.",
+	}
+	
+];
+
+export const accordionList3 = [
+  {
+    no: "One",
+    expand: false,
+    heading: "How long are the services?",
+    body: `Sunday and Midweek services are 90 minutes long.`
+  },
+  {
+    no: "Two",
+    expand: false,
+    heading: "What are the service times?",
+    body: `We run three services every Sunday. 11:30 am. On Wednesday, time is 7:00 pm`
+  },
+  {
+    no: "Three",
+    expand: false,
+    heading: "Who is Jesus Christ?",
+    body: `Jesus is the son of God, who came to the world to die for you and me in order to ensure that we have a relationship with our father God. John 3:16 says “For God so loved the world that He gave His only begotten son that whosoever believes in Him shall not perish but have everlasting life”.`
+  },
+  {
+    no: "Four",
+    expand: false,
+    heading: "What if I need prayers and/or counselling?",
+    body: `There are pastors available to counsel and pray with you after every service. Please speak to an usher and they would direct accordingly.`
+  },
+  {
+    no: "Five",
+    expand: false,
+    heading: "Do you provide Childcare?",
+    body: `Yes, our children’s church (2 – 12 years old) and Teens church (13 – 19 year olds) run concurrently with the main services.`
+  },
+  {
+    no: "Six",
+    expand: false,
+    heading: "Where can I park?",
+    body: `Free parking is available on-site at Ormiston Bushfield Academy. Friendly ushers will be there to guide you as you arrive.`
+  }
+];
 
 const processList = [
 	{
@@ -226,4 +278,4 @@ const faqList = [
   }
 ];
 
-export default { serviceList, processList, abouts, pricingList, faqList };
+export default { givingList, serviceList, processList, abouts, pricingList, faqList, donations, accordionList3 };
