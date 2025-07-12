@@ -40,7 +40,7 @@ const About: NextPage = () => {
       <main className="content-wrapper">
         <AboutUs />
 
-        <section className="wrapper bg-light">
+        {/* <section className="wrapper bg-light">
           <div className="container pb-14 pb-md-16">
             <div className="row gx-lg-8 gx-xl-12 gy-6 mb-10 align-items-center">
               <div className="col-lg-7 order-lg-2">
@@ -61,7 +61,7 @@ const About: NextPage = () => {
               </div>
             </div>
           </div>
-        </section>
+        </section> */}
       </main>
 
       {/* ========== footer section ========== */}

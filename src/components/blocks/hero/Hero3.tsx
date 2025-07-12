@@ -44,7 +44,7 @@ export default function Hero15() {
                     day.
                   </p>
 
-                  <div className="animate__animated animate__slideInUp animate__delay-3s">
+                  {/* <div className="animate__animated animate__slideInUp animate__delay-3s">
                     <a
                       data-glightbox
                       href="/media/movie.mp4"
@@ -52,7 +52,7 @@ export default function Hero15() {
                     >
                       <i className="icn-caret-right" />
                     </a>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </div>

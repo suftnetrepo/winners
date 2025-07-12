@@ -54,7 +54,7 @@ const Navbar: FC<NavbarProps> = (props) => {
       
 
             <li className="nav-item">
-              <NextLink title="Events" className="nav-link" href="/features" />
+              <NextLink title="Events" className="nav-link" href="/" />
             </li>
 
             <li className="nav-item">
