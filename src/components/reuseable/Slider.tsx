@@ -34,13 +34,13 @@ export default function Slider() {
                         srcSet={item.image['2x']}
                         alt={item.title}
                       />
-                      <div className="absolute inset-0  bg-overlay bg-overlay-500 bg-image" />
+                      <div className="absolute inset-0  bg-overlay bg-overlay-600 bg-image" />
                       {/* Centered Overlay */}
                       <div className="absolute inset-0 flex items-center justify-center text-center bg-black/40 px-8">
                         <div className="text-white">
                           <h3 className="text-2xl text-white font-semibold mb-1">{item.title}</h3>
                           <p className="text-sm text-white">{item.description}</p>
-                          <NextLink href="#" title={item.button} className="btn btn-aqua rounded-pill" />
+                          <NextLink href="#" title={item.button} className="btn btn-primary rounded-pill" />
                         </div>
                       </div>
                     </div>

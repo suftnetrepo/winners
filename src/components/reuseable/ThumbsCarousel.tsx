@@ -3,10 +3,10 @@ import { FC, useState } from 'react';
 import Swiper, { FreeMode, Navigation, Thumbs } from 'swiper';
 import { Swiper as SwiperCarousel, SwiperSlide } from 'swiper/react';
 // -------- custom hook -------- //
-import useLightBox from 'hooks/useLightBox';
+// import useLightBox from 'hooks/useLightBox';
 
 const ThumbsCarousel: FC = () => {
-  useLightBox();
+  //useLightBox();
   const [thumbsSwiper, setThumbsSwiper] = useState<Swiper>();
   const [prevEl, setPrevEl] = useState<HTMLElement | null>(null);
   const [nextEl, setNextEl] = useState<HTMLElement | null>(null);

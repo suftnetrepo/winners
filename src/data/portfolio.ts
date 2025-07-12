@@ -65,7 +65,7 @@ export const portfolioList3 = [
     title: 'Word of Faith Bible Institute (WOFBI)',
     description:
       'At WOFBI, we do not offer mere secular education; we also provide deep spiritual enlightenment and training.',
-    image: { '1x': '/img/photos/fc1.jpg', '2x': '/img/photos/fc1@2x.jpg 2x' },
+    image: { '1x': '/img/church/IMG_1016.png', '2x': '/img/church/IMG_1016.png 2x' },
     button: 'Join us'
   },
   {
@@ -73,9 +73,9 @@ export const portfolioList3 = [
     photos: 8,
     category: 'Wedding',
     name: 'Stacy & Thomas',
-    title: 'Belivers Foundation Class',
+    title: 'Believers Foundation Class',
     description: 'Join the foundation class today and see how to connect with the blessings here.',
-    image: { '1x': '/img/photos/fc2.jpg', '2x': '/img/photos/fc2@2x.jpg 2x' },
+       image: { '1x': '/img/church/IMG_1018.png', '2x': '/img/church/IMG_1018.png 2x' },
     button: 'Join us'
   },
   {
@@ -85,7 +85,7 @@ export const portfolioList3 = [
     name: 'Katherine & Jack',
     title: 'Teens Fellowship',
     description: 'Our vibrant Teens church holds every Sunday 10am. If you need more information, please contact us.',
-    image: { '1x': '/img/photos/fc3.jpg', '2x': '/img/photos/fc3@2x.jpg 2x' },
+   image: { '1x': '/img/church/wci-mk-teens-1.jpg', '2x': '/img/church/wci-mk-teens-1.jpg 2x' },
     button: 'Join us'
   },
   {
@@ -95,19 +95,19 @@ export const portfolioList3 = [
     name: 'Jolene & William',
     title: 'Youth Alive Fellowship',
     description: 'Our Youths are burning for the Lord and equipped with relevant skills for the future. Contact us for more information',
-    image: { '1x': '/img/photos/fc4.jpg', '2x': '/img/photos/fc4@2x.jpg 2x' },
+     image: { '1x': '/img/church/IMG_1034.png', '2x': '/img/church/IMG_1034.png 2x' },
     button: 'Join us'
   },
-  {
-    id: 5,
-    photos: 6,
-    category: 'Engagement',
-    name: 'Jenn & Richard',
-    title: 'Winners Kids',
-    description: 'Our Children’s church where we teach children in the way of the Lord holds every Sunday 10am.',
-    image: { '1x': '/img/photos/fc5.jpg', '2x': '/img/photos/fc5@2x.jpg 2x' },
-    button: 'Join us'
-  }
+  // {
+  //   id: 5,
+  //   photos: 6,
+  //   category: 'Engagement',
+  //   name: 'Jenn & Richard',
+  //   title: 'Winners Kids',
+  //   description: 'Our Children’s church where we teach children in the way of the Lord holds every Sunday 10am.',
+  //   image: { '1x': '/img/photos/fc5.jpg', '2x': '/img/photos/fc5@2x.jpg 2x' },
+  //   button: 'Join us'
+  // }
 ];
 
 // used in the portfolio-5 block
