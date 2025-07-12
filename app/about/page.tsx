@@ -65,7 +65,7 @@ const About: NextPage = () => {
       </main>
 
       {/* ========== footer section ========== */}
-      <Footer />
+       <Footer backgroundColor='bg-gray'  />
     </Fragment>
   );
 };
