@@ -33,7 +33,7 @@
     "**/*.js",
     "**/*.jsx",
     ".next/types/**/*.ts",
-    "middleware.js"
+    "_middleware.js"
 , "app/api/users/update"  ],
   "exclude": ["node_modules"]
 }
