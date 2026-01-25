@@ -51,10 +51,12 @@ const Navbar: FC<NavbarProps> = (props) => {
               <NextLink title="About us" className="nav-link" href="/about" />
             </li>
 
-      
-
             <li className="nav-item">
               <NextLink title="Events" className="nav-link" href="/" />
+            </li>
+
+             <li className="nav-item">
+              <NextLink title="Resources" className="nav-link" href="/" />
             </li>
 
             <li className="nav-item">

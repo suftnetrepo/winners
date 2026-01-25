@@ -8,9 +8,14 @@ export const api = axios.create({
   },
 });
 
-api.interceptors.request.use((config) => {
-  if (config.headers) {
-    config.headers['nj-api-key'] = process.env.JERUR_NEXT_API_KEY;
-  }
-  return config;
-});
+api.interceptors.request.use(
+  (config) => {
+    config.headers = {
+      ...config.headers,
+      'nj-api-key': process.env.JERUR_NEXT_API_KEY,
+    };
+
+    return config;
+  },
+  (error) => Promise.reject(error)
+);

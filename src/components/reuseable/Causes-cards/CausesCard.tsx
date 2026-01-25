@@ -1,8 +1,8 @@
 import { FC } from 'react';
 import Link from 'next/link';
 import NextLink from '../links/NextLink';
-import FigureImage from 'components/reuseable/FigureImage';
-import ProgressBar from 'components/common/ProgressBar';
+import FigureImage from '@/components/reuseable/FigureImage';
+import ProgressBar from '@/components/common/ProgressBar';
 
 // ========================================================
 type CausesCardProps = {
@@ -25,10 +25,8 @@ const CausesCard: FC<CausesCardProps> = (props) => {
       <div className="card">
         <figure className="card-img-top overlay overlay-1 hover-scale">
           <Link href="#">
-            <a>
-              <FigureImage width={560} height={350} src={image} />
-              <span className="bg" />
-            </a>
+            <FigureImage width={560} height={350} src={image} />
+            <span className="bg" />
           </Link>
 
           <figcaption>

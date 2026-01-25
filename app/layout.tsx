@@ -1,9 +1,6 @@
 'use client';
 import { usePathname } from 'next/navigation';
 import { useEffect } from 'react';
-import ThemeProvider from '@/theme/ThemeProvider';
-import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
-import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFnsV3';
 import 'react-big-calendar/lib/css/react-big-calendar.css';
 // Bootstrap and custom scss
 import '@/assets/scss/style.scss';
@@ -21,8 +18,8 @@ import 'plyr-react/plyr.css';
 import 'glightbox/dist/css/glightbox.css';
 // custom scrollcue css
 import '@/plugins/scrollcue/scrollCue.css';
-import { AppProvider } from '../Store/AppContext';
 import { SessionProvider } from 'next-auth/react';
+import { Providers } from './provider';
 
 function RootLayout({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
@@ -47,13 +44,9 @@ function RootLayout({ children }: { children: React.ReactNode }) {
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
       </head>
       <body>
-        <SessionProvider>
-          <ThemeProvider>
-            <LocalizationProvider dateAdapter={AdapterDateFns}>
-              <AppProvider>{children}</AppProvider>
-            </LocalizationProvider>
-          </ThemeProvider>
-        </SessionProvider>
+         <Providers>
+           {children}
+          </Providers>
       </body>
     </html>
   );

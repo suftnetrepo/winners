@@ -1,8 +1,7 @@
 import { logger } from '@/utils/logger';
 import axios from 'axios';
 
-
-export class ApiError extends Error {
+ class ApiError extends Error {
   constructor(message, status = 500, data = null) {
     super(message);
     this.name = 'ApiError';
@@ -11,24 +10,23 @@ export class ApiError extends Error {
   }
 }
 
-export function normalizeApiError(error) {
+ function normalizeApiError(error) {
   if (axios.isAxiosError(error)) {
-    return new ApiError(
-      error.response?.data?.message || error.message || 'Request failed',
-      error.response?.status || 500,
-      error.response?.data
-    );
+    const status = error.response?.status || 500;
+    const message = error.response?.data?.message || error.message || 'Request failed';
+    const data = error.response?.data;
+    return new ApiError(message, status, data);
   }
 
   if (error instanceof Error) {
-    logger.error(error)
+    logger.error(error);
     return new ApiError(error.message);
   }
 
   return new ApiError('Unknown error');
 }
 
-export function handleApiError(error) {
+ function handleApiError(error) {
   if (error instanceof ApiError) {
     return Response.json(
       {
@@ -38,8 +36,6 @@ export function handleApiError(error) {
       { status: error.status }
     );
   }
-
-  console.error('[Unhandled API Error]', error);
 
   return Response.json(
     { message: 'Internal server error' },
