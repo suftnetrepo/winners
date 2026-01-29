@@ -13,7 +13,10 @@ interface SlideData {
 
 export default function Hero15() {
   const { data, error, loading } = useSlider();
-  const activeSlides = (data?.data || [])?.filter((slide: SlideData) => slide.status);
+  const slides = Array.isArray(data?.data) ? data.data : [];
+  const activeSlides = slides.filter(
+    (slide: SlideData) => slide.status
+  );
 
   const layoutConfigs = [
     {
@@ -56,26 +59,26 @@ export default function Hero15() {
                 </div>
               </div>
             </div>
-               <div
-            className="swiper-slide bg-overlay bg-overlay-800 bg-dark bg-image"
-            style={{ backgroundImage: 'url("/img/church/25 May 2025/IMG_1028.png")' }}
-          >
-            <div className="container h-100">
-              <div className="row h-100">
-                <div className="col-md-11 col-lg-8 col-xl-7 col-xxl-6 mx-auto text-center justify-content-center align-self-center">
-                  <h2 className="display-1 fs-56 mb-4 text-white animate__animated animate__slideInDown animate__delay-1s">
-                    Faith. Family. Purpose.
-                  </h2>
+            <div
+              className="swiper-slide bg-overlay bg-overlay-800 bg-dark bg-image"
+              style={{ backgroundImage: 'url("/img/church/25 May 2025/IMG_1028.png")' }}
+            >
+              <div className="container h-100">
+                <div className="row h-100">
+                  <div className="col-md-11 col-lg-8 col-xl-7 col-xxl-6 mx-auto text-center justify-content-center align-self-center">
+                    <h2 className="display-1 fs-56 mb-4 text-white animate__animated animate__slideInDown animate__delay-1s">
+                      Faith. Family. Purpose.
+                    </h2>
 
-                  <p className="lead fs-23 lh-sm mb-7 text-white animate__animated animate__slideInRight animate__delay-2s">
-                    We exist to help you grow in faith, build strong families, and live out your God-given purpose every
-                    day.
-                  </p>
+                    <p className="lead fs-23 lh-sm mb-7 text-white animate__animated animate__slideInRight animate__delay-2s">
+                      We exist to help you grow in faith, build strong families, and live out your God-given purpose every
+                      day.
+                    </p>
 
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
           </Carousel>
         </div>
       </div>
