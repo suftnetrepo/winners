@@ -412,6 +412,15 @@ const featuresOptions = FEATURES.map(feature => ({
   label: feature.name
 }));
 
+function formatPhoneNumbers(input) {
+  if(!input) return;
+  return input
+    .split(',')
+    .map(n => n.trim())
+    .filter(Boolean)
+    .map(n => n.startsWith('+') ? n : `+44 ${n}`)
+    .join(' <br />\n');
+}
 
 export {
   FEATURES,
@@ -447,5 +456,6 @@ export {
   formatDateTime,
   isValidObjectId,
   generatePassword,
-  comparePassword
+  comparePassword,
+  formatPhoneNumbers
 };

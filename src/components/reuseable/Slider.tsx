@@ -39,7 +39,7 @@ export default function Slider() {
                       <div className="text-white">
                         <h3 className="text-2xl text-white font-semibold mb-1">{item.title}</h3>
                         <p className="text-sm text-white">{item.description}</p>
-                        <NextLink href="#" title={item.button} className="btn btn-primary rounded-pill" />
+                        <NextLink href={item?.link ?? ''} title={item.button} className="btn btn-primary rounded-pill" />
                       </div>
                     </div>
                   </div>

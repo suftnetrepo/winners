@@ -66,7 +66,8 @@ export const portfolioList3 = [
     description:
       'At WOFBI, we do not offer mere secular education; we also provide deep spiritual enlightenment and training.',
     image: { '1x': '/img/church/IMG_1016.png', '2x': '/img/church/IMG_1016.png 2x' },
-    button: 'Join us'
+    button: 'Join us',
+    link :'/resources'
   },
   {
     id: 2,

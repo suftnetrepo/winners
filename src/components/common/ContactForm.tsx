@@ -40,19 +40,7 @@ const ContactForm: FC = () => {
         </div>
 
         <div className="col-md-6">
-          <div className="form-select-wrapper mb-4">
-            <select className="form-select" id="form-select" name="department" required>
-              <option disabled value="">
-                Select a department
-              </option>
-              <option value="Sales">Sales</option>
-              <option value="Marketing">Marketing</option>
-              <option value="Customer Support">Customer Support</option>
-            </select>
-
-            <div className="valid-feedback"> Looks good! </div>
-            <div className="invalid-feedback"> Please select a department. </div>
-          </div>
+          
         </div>
 
         <div className="col-12">

@@ -58,7 +58,7 @@ export default function Page() {
           <div className="container py-14 py-md-16">
             <div className="row mb-8">
               <div className="col-lg-11 col-xxl-10 mx-auto text-center">
-                <h3 className="display-3 mb-4">Are you new or planning to visit us?</h3>
+                
                 <p className="mb-6 fs-20 px-16">
                   If you’re new or planning your first visit, our FAQ section
                   has everything you need — from service times and parking info to what to expect during worship. We’re
