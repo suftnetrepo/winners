@@ -77,28 +77,29 @@ export const portfolioList3 = [
     title: 'Believers Foundation Class',
     description: 'Join the foundation class today and see how to connect with the blessings here.',
        image: { '1x': '/img/church/IMG_1018.png', '2x': '/img/church/IMG_1018.png 2x' },
-    button: 'Join us'
+    button: 'Join us',
+        link :'/course'
   },
-  {
-    id: 3,
-    photos: 7,
-    category: 'Couples',
-    name: 'Katherine & Jack',
-    title: 'Teens Fellowship',
-    description: 'Our vibrant Teens church holds every Sunday 10am. If you need more information, please contact us.',
-   image: { '1x': '/img/church/wci-mk-teens-1.jpg', '2x': '/img/church/wci-mk-teens-1.jpg 2x' },
-    button: 'Join us'
-  },
-  {
-    id: 4,
-    photos: 9,
-    category: 'Wedding',
-    name: 'Jolene & William',
-    title: 'Youth Alive Fellowship',
-    description: 'Our Youths are burning for the Lord and equipped with relevant skills for the future. Contact us for more information',
-     image: { '1x': '/img/church/IMG_1034.png', '2x': '/img/church/IMG_1034.png 2x' },
-    button: 'Join us'
-  },
+  // {
+  //   id: 3,
+  //   photos: 7,
+  //   category: 'Couples',
+  //   name: 'Katherine & Jack',
+  //   title: 'Teens Fellowship',
+  //   description: 'Our vibrant Teens church holds every Sunday 10am. If you need more information, please contact us.',
+  //  image: { '1x': '/img/church/wci-mk-teens-1.jpg', '2x': '/img/church/wci-mk-teens-1.jpg 2x' },
+  //   button: 'Join us'
+  // },
+  // {
+  //   id: 4,
+  //   photos: 9,
+  //   category: 'Wedding',
+  //   name: 'Jolene & William',
+  //   title: 'Youth Alive Fellowship',
+  //   description: 'Our Youths are burning for the Lord and equipped with relevant skills for the future. Contact us for more information',
+  //    image: { '1x': '/img/church/IMG_1034.png', '2x': '/img/church/IMG_1034.png 2x' },
+  //   button: 'Join us'
+  // },
   // {
   //   id: 5,
   //   photos: 6,
@@ -182,45 +183,3 @@ export const portfolioList6 = [
   }
 ];
 
-const projects = [
-  {
-    id: 1,
-    category: 'Stationary',
-    link: '/single-project-1',
-    title: 'Cras Fermentum Sem',
-    image: '/img/photos/pd7.jpg',
-    fullImage: '/img/photos/pd7-full.jpg'
-  },
-  {
-    id: 2,
-    link: '/single-project-1',
-    category: 'Magazine, Book',
-    title: 'Mollis Ipsum Mattis',
-    image: '/img/photos/pd8.jpg',
-    fullImage: '/img/photos/pd8-full.jpg'
-  },
-  {
-    id: 3,
-    category: 'Packaging',
-    link: '/single-project-1',
-    title: 'Ipsum Ultricies Cursus',
-    image: '/img/photos/pd9.jpg',
-    fullImage: '/img/photos/pd9-full.jpg'
-  },
-  {
-    id: 4,
-    link: '/single-project-1',
-    image: '/img/photos/pd10.jpg',
-    category: 'Stationary, Branding',
-    title: 'Inceptos Euismod Egestas',
-    fullImage: '/img/photos/pd10-full.jpg'
-  },
-  {
-    id: 5,
-    category: 'Packaging',
-    link: '/single-project-1',
-    image: '/img/photos/pd11.jpg',
-    title: 'Ipsum Mollis Vulputate',
-    fullImage: '/img/photos/pd11-full.jpg'
-  }
-];

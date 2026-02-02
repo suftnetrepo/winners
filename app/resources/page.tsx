@@ -72,7 +72,7 @@ export default function Page() {
                     </div>
                 </section>
                 <section className="content-section">
-                    <div className="container">
+                    <div className="container mt-5">
                         <div className="row">
                             <div className="col-lg-6 mb-4">
                                 <div className="image-container">

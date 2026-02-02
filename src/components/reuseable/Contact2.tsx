@@ -13,7 +13,7 @@ type TalkProps = {
 
 export default function Talk({data}: TalkProps) {
   return (
-    <div className="row gx-0">
+    <div className="container d-flex justify-content-center row gx-0">
       <div
         className="col-lg-6 image-wrapper bg-image bg-cover rounded d-none d-md-block"
         style={{ backgroundImage: `url(${data?.secure_url})` }}

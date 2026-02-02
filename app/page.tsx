@@ -28,22 +28,19 @@ const Home: NextPage = () => {
       <PageProgress />
 
       <header className="wrapper">
-        <Navbar fancy navClassName="navbar navbar-expand-lg navbar-light navbar-bg-light " />
+        <Navbar fancy navClassName="navbar navbar-expand-lg " />
       </header>
 
       <main className="content-wrapper">
         <Hero data={data?.data?.sliders} />
-        <div className="container pt-10 pt-md-14 pb-13 pb-md-15 mb-n14">
+        <div className=" pb-18 pt-18 bg-light">
           <Tiles />
         </div>
         <Fact data={data?.data?.prophetic_focus} />
-        <div className="container pt-md-18 pb-md-18 ">
+        <div className="d-flex justify-content-center py-18 bg-light">
           <Talk data={data?.data?.pastor_section} />
         </div>
         <Slider />
-        <div className="container  pt-md-9 pb-13 pb-md-15 mb-n14">
-          <PrayerRequestForm />
-        </div>
       </main>
 
       <Footer backgroundColor='bg-light' />

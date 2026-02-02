@@ -18,7 +18,7 @@ export default function Slider() {
             </div>
           </div>
 
-          <div className="swiper-container grid-view nav-bottom nav-color mb-14 text-center">
+          <div className="swiper-container grid-view nav-bottom nav-color  text-center">
             <Carousel
               pagination={false}
               className="overflow-visible pb-2"
