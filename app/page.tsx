@@ -7,7 +7,6 @@ import { Footer } from '@/components/blocks/footer';
 import Hero from '@/components/blocks/hero/Hero';
 import useLightBox from '@/hooks/useLightBox';
 import { Navbar } from '@/components/blocks/navbar';
-import PrayerRequestForm from '@/components/elements/prayerform';
 import Tiles from '@/components/blocks/tiles';
 import Fact from '@/components/reuseable/Fact';
 import Talk from '@/components/reuseable/Contact2';
@@ -17,11 +16,6 @@ import { useSettings } from '@/hooks/useSettings';
 const Home: NextPage = () => {
   useLightBox();
   const { data, error, loading } = useSettings()
-
-
-  console.log("....", {
-    data, error, loading
-  })
 
   return (
     <Fragment>

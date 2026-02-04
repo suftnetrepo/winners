@@ -67,7 +67,8 @@ export const portfolioList3 = [
       'At WOFBI, we do not offer mere secular education; we also provide deep spiritual enlightenment and training.',
     image: { '1x': '/img/church/IMG_1016.png', '2x': '/img/church/IMG_1016.png 2x' },
     button: 'Join us',
-    link :'/resources'
+    link :'/resources/wofbi',
+    theme :'btn-leaf '
   },
   {
     id: 2,
@@ -78,7 +79,8 @@ export const portfolioList3 = [
     description: 'Join the foundation class today and see how to connect with the blessings here.',
        image: { '1x': '/img/church/IMG_1018.png', '2x': '/img/church/IMG_1018.png 2x' },
     button: 'Join us',
-        link :'/course'
+        link :'/resources/bfc',
+        theme :'btn-orange '
   },
   // {
   //   id: 3,

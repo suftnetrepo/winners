@@ -5,6 +5,8 @@ import useSticky from '@/hooks/useSticky';
 import NextLink from '@/components/reuseable/links/NextLink';
 import SocialLinks from '@/components/reuseable/SocialLinks';
 import Social from './partials/Social';
+import DropdownToggleLink from '@/components/reuseable/links/DropdownToggleLink';
+import ListItemLink from '@/components/reuseable/links/ListItemLink';
 
 type NavbarProps = {
   info?: boolean;
@@ -51,12 +53,16 @@ const Navbar: FC<NavbarProps> = (props) => {
               <NextLink title="About us" className="nav-link" href="/about" />
             </li>
 
-            <li className="nav-item">
+            {/* <li className="nav-item">
               <NextLink title="Events" className="nav-link" href="/" />
-            </li>
+            </li> */}
 
-             <li className="nav-item">
-              <NextLink title="Resources" className="nav-link" href="/" />
+             <li className="nav-item dropdown">
+               <DropdownToggleLink title="Resources" className="nav-link dropdown-toggle" />
+                  <ul className="dropdown-menu">
+                     <ListItemLink href="/resources/bfc" title="Believer Foundation Class (BFC)" linkClassName="dropdown-item muted" />
+                      <ListItemLink href="/resources/wofbi" title="Word of Faith Bible Institute (WOFBI)" linkClassName="dropdown-item" />
+                  </ul>
             </li>
 
             <li className="nav-item">
