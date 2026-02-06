@@ -3,10 +3,12 @@
 //----------------------------------------------------------//
 .card {
   box-shadow: $box-shadow-with-border;
-  border: 0;
+  border: 1;
   &[class*="bg-"] {
     box-shadow: none !important;
   }
+  border-radius: 12px;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 .card-img-top img {
   border-top-left-radius: $card-inner-border-radius;
@@ -126,3 +128,36 @@
     }
   }
 }
+
+.image-wrapper {
+  position: relative;
+  height: 220px;        /* pick your desired height */
+  overflow: hidden;
+}
+
+.card-image {
+  object-fit: cover;    /* crops image, keeps aspect ratio */
+}
+
+.post-content {
+  flex: 1;
+}
+
+.card-body {
+  flex: 1; /* pushes footer down evenly */
+  display: flex;
+  flex-direction: column;
+}
+
+/* 🔑 Equal-height description */
+.card-description {
+  display: -webkit-box;
+  -webkit-line-clamp: 4;       /* 👈 number of lines */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+
+  line-height: 1.6;
+  min-height: calc(1.6em * 4);
+  max-height: calc(1.6em * 4);
+}
+

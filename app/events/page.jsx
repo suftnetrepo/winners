@@ -1,0 +1,68 @@
+'use client';
+
+import { Fragment } from 'react';
+import { Clock1, Clock } from 'lucide-react';
+import { Footer } from '@/components/blocks/footer';
+import NextLink from '@/components/reuseable/links/NextLink';
+import PageProgress from '@/components/common/PageProgress';
+import Navbar from '@/components/blocks/navbar/Navbar';
+import Link from 'next/link';
+import { useEvent } from '@/hooks/useEvents';
+import Card from '@/components/blocks/card';
+
+export default function Page() {
+
+  const { data, error, loading } = useEvent()
+
+  console.log("....................", { data, error, loading })
+
+  return (
+    <Fragment>
+      <PageProgress />
+
+      {/* <Topbar /> */}
+      <header className="wrapper bg-light">
+        <Navbar
+          info
+          navOtherClass="navbar-other ms-lg-4"
+          navClassName="navbar navbar-expand-lg classic transparent navbar-white"
+          button={
+            <Link href="/give" className="btn btn-sm btn-danger rounded-pill">
+              Give
+            </Link>
+          }
+        />
+      </header>
+
+      <main className="content-wrapper">
+        {/* ========== title section ========== */}
+        <section className="section-frame overflow-hidden">
+          <div className="wrapper bg-gray">
+            <div className="container py-13 py-md-13 text-center">
+              <div className="row">
+                <div className="col-lg-10 col-xxl-8 mx-auto">
+                  <h3 className="display-4 mb-3 text-center">We Believe in the Power of Prayer</h3>
+                  <p className="lead fs-lg mb-10 text-center">
+                    Whatever you're facing, you're not alone. Let us stand with you in prayer.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section className="wrapper">
+          <div className="container py-15 py-md-17">
+            <div className="row grid-view gy-6">
+              {(data?.data || []).map((item) => (
+                <div className="col-md-6 col-lg-4" key={item._id}>
+                  <Card className="card shadow-lg" {...item} />
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      </main>
+      <Footer backgroundColor='bg-gray' />
+    </Fragment>
+  );
+}

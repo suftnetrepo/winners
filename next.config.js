@@ -18,7 +18,13 @@ const nextConfig = {
   },
   reactStrictMode: false,
   images: {
-    domains: ['snatchi.org'],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'picsum.photos',
+      },
+    ],
+    domains: ['snatchi.org', 'loremflickr.com'],
     formats: ['image/avif', 'image/webp']
   },
 
