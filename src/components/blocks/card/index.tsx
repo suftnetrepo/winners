@@ -38,12 +38,14 @@ export default function Card(props: CardProps) {
                         </h2>
                     </div>
 
-                    <div className="post-content">
-                        <div
-                            className="card-description"
-                            dangerouslySetInnerHTML={{ __html: description }}
-                        />
+                    <div className="post-content card-description">
+                        <div className="d-flex flex-row">
 
+
+                            <address>
+                                {completeAddress}
+                            </address>
+                        </div>
                     </div>
                 </div>
 
