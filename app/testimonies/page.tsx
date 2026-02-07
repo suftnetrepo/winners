@@ -42,7 +42,7 @@ export default function Page() {
             </div>
           </div>
         </section>
-        <div className="container pt-10 pt-md-14 pb-13 pb-md-15 mb-8">
+        <div className="container pt-10 pt-md-14  ">
           <Testimonial />
         </div>
       </main>

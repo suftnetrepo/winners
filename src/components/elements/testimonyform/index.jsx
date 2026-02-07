@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 
-
-const PrayerRequestForm = () => {
+const TestimonyForm = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -75,16 +74,7 @@ const PrayerRequestForm = () => {
     <div className='mb-14' style={styles.body}>
       <div className="container">
         <div style={styles.formContainer}>
-          <div style={styles.headerSection}>
-            <div >
-              <i className="bi bi-envelope" style={styles.mailIcon}></i>
-            </div>
-            <h1 className="fw-bold mb-3 text-dark">We're Praying With You</h1>
-            <p style={styles.infoText}>
-              Let us join you in prayer. Share your heart, your struggles, or your praise. 
-              Our prayer team is committed to interceding on your behalf.
-            </p>
-          </div>
+        
           
           {submitted && (
             <div className="alert alert-success" role="alert">
@@ -95,7 +85,7 @@ const PrayerRequestForm = () => {
           
           <form onSubmit={handleSubmit}>
             <div className="row mb-3">
-              <div className="col-md-6 mb-3 mb-md-0">
+              <div className="col-md-12 mb-3 mb-md-0">
                 <label htmlFor="name" className="form-label" style={styles.formLabel}>
                   Name <span className="text-danger">*</span>
                 </label>
@@ -110,8 +100,9 @@ const PrayerRequestForm = () => {
                 />
                 {errors.name && <div className="invalid-feedback">{errors.name}</div>}
               </div>
-              <div className="col-md-6">
-                <label htmlFor="email" className="form-label" style={styles.formLabel}>
+             
+            <div className="mb-3">
+              <label htmlFor="email" className="form-label" style={styles.formLabel}>
                   Email <span className="text-danger">*</span>
                 </label>
                 <input
@@ -128,21 +119,6 @@ const PrayerRequestForm = () => {
             </div>
             
             <div className="mb-3">
-              <label htmlFor="phone" className="form-label" style={styles.formLabel}>
-                Phone Number <span className="text-muted">(Optional)</span>
-              </label>
-              <input
-                type="tel"
-                className="form-control"
-                id="phone"
-                placeholder="Enter your phone number"
-                value={formData.phone}
-                onChange={handleChange}
-                style={styles.formControl}
-              />
-            </div>
-            
-            <div className="mb-3">
               <label htmlFor="message" className="form-label" style={styles.formLabel}>
                 Message <span className="text-danger">*</span>
               </label>
@@ -150,7 +126,7 @@ const PrayerRequestForm = () => {
                 className={`form-control ${errors.message ? 'is-invalid' : ''}`}
                 id="message"
                 rows="6"
-                placeholder="Describe your prayer request - whether for healing, guidance, provision, or thanksgiving..."
+                placeholder="Describe your testimony - whether for healing, guidance, provision, or thanksgiving..."
                 value={formData.message}
                 onChange={handleChange}
                 style={styles.formControl}
@@ -159,7 +135,7 @@ const PrayerRequestForm = () => {
             </div>
             
             <button type="submit" style={styles.submitBtn}>
-              <i className="bi bi-send-check-fill me-2"></i>Submit
+              <i className="bi bi-send-check-fill me-2"></i>Submit 
             </button>
           </form>
         </div>
@@ -169,9 +145,7 @@ const PrayerRequestForm = () => {
 };
 
 const styles = {
-  body: {
-    padding: '10px 0',
-  },
+ 
   formContainer: {
     background: 'white',
     borderRadius: '25px',
@@ -180,21 +154,7 @@ const styles = {
     maxWidth: '700px',
     margin: '0 auto'
   },
-  headerSection: {
-    textAlign: 'center',
-    marginBottom: '40px'
-  },
-  mailIconWrapper: {
-    display: 'inline-block',
-    padding: '20px',
-    background: 'linear-gradient(135deg, #5c6ac4 0%, #4285f4 100%)',
-    borderRadius: '20px',
-    marginBottom: '25px'
-  },
-  mailIcon: {
-    fontSize: '3rem',
-    color: 'black'
-  },
+
   formLabel: {
     fontWeight: '600',
     color: '#333',
@@ -219,11 +179,7 @@ const styles = {
     margin: '30px auto 0',
     cursor: 'pointer'
   },
-  infoText: {
-    color: '#666',
-    fontSize: '0.95rem',
-    lineHeight: '1.6'
-  }
+  
 };
 
-export default PrayerRequestForm;
+export default TestimonyForm;

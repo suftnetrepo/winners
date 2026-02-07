@@ -24,7 +24,7 @@ const nextConfig = {
         hostname: 'picsum.photos',
       },
     ],
-    domains: ['snatchi.org', 'loremflickr.com'],
+    domains: ['winners-4uel.onrender.com', 'loremflickr.com', 'res.cloudinary.com'],
     formats: ['image/avif', 'image/webp']
   },
 

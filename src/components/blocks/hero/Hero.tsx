@@ -97,26 +97,54 @@ export default function Hero({ data }: Hero3Props) {
             return (
               <div
                 key={slide._id}
-                className="swiper-slide bg-overlay bg-overlay-800 bg-dark bg-image"
-                style={{
-                  backgroundImage: `url('${slide.secure_url}')`,
-                  backgroundSize: 'cover',
-                  backgroundPosition: 'center'
-                }}
+                className="swiper-slide position-relative w-100 overflow-hidden"
+                style={{ height: '500px' }}
               >
-                <div className="container h-100">
-                  <div className="row h-100">
-                    <div className={`${config.layoutClass} ${config.contentAlignment}`}>
-                      <h2 className="display-1 fs-56 mb-4 text-white animate__animated animate__slideInDown animate__delay-1s">
-                        {slide.title}
-                      </h2>
+                {/* 1. Blurred Background */}
+                <div
+                  className="position-absolute top-0 start-0 w-100 h-100"
+                  style={{
+                    backgroundImage: `url('${slide.secure_url}')`,
+                    backgroundSize: 'cover',
+                    filter: 'blur(20px) brightness(0.5)',
+                    transform: 'scale(1.1)',
+                    zIndex: 0 // Explicitly set to bottom
+                  }}
+                />
 
-                      <p className="lead fs-23 lh-sm mb-7 text-white animate__animated animate__slideInRight animate__delay-2s">
-                        {slide.message}
-                      </p>
+                {/* 2. Main Image */}
+                <img
+                  src={slide.secure_url}
+                  alt={slide.title}
+                  className="position-relative w-100 h-100"
+                  style={{
+                    objectFit: 'contain',
+                    zIndex: 1 // Middle layer
+                  }}
+                />
+
+                {/* 3. Text Overlay - THE FIX IS HERE */}
+                {!slide.imageOnly && (
+                  <div
+                    className="container position-absolute top-50 start-50 translate-middle"
+                    style={{
+                      zIndex: 10, // Higher than the image
+                      pointerEvents: 'none' // Allows clicking/swiping through the text
+                    }}
+                  >
+                    <div className="row h-100">
+                      <div className={`${config.layoutClass} ${config.contentAlignment}`} style={{ pointerEvents: 'auto' }}>
+                        <h2 className="display-1 fs-56 mb-4 text-white animate__animated animate__slideInDown animate__delay-1s">
+                          {slide.title}
+                        </h2>
+
+                        <p className="lead fs-23 lh-sm mb-7 text-white animate__animated animate__slideInRight animate__delay-2s">
+                          {slide.message}
+                        </p>
+                      </div>
                     </div>
                   </div>
-                </div>
+                )}
               </div>
             );
           })}

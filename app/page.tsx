@@ -36,7 +36,6 @@ const Home: NextPage = () => {
         </div>
         <Slider />
       </main>
-
       <Footer backgroundColor='bg-light' />
     </Fragment>
   );

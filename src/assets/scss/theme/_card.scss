@@ -161,3 +161,18 @@
   max-height: calc(1.6em * 4);
 }
 
+.smaller-text {
+  font-size: 0.65rem;
+  letter-spacing: 0.5px;
+}
+
+.fw-black {
+  font-weight: 900;
+}
+
+.card-text {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}

@@ -12,6 +12,7 @@ interface CarouselProps extends SwiperProps {
   slideClassName?: string;
   children: ReactElement[];
   slidesPerView?: number | 'auto';
+    height?: number;
 }
 // ==================================================================
 
@@ -23,6 +24,7 @@ const Carousel: FC<CarouselProps> = (props) => {
     slidesPerView = 3,
     pagination = true,
     navigation = true,
+      height,
     ...others
   } = props;
 
@@ -36,6 +38,7 @@ const Carousel: FC<CarouselProps> = (props) => {
       modules={[Pagination, Navigation, Autoplay]}
       navigation={navigation ? { prevEl, nextEl } : false}
       pagination={pagination ? { clickable: true } : false}
+       style={height ? { height } : undefined}   // 👈 THIS
       {...others}
     >
       {children.map((slide, i) => (

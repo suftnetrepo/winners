@@ -1,6 +1,5 @@
 
 import Link from 'next/link';
-import NextLink from "@/components/reuseable/links/NextLink";
 
 interface FactData {
   description?: string;
@@ -18,7 +17,7 @@ export default function Fact({data} : FactProp) {
         <div className="container py-16 py-md-18 text-center">
           <div className="row">
             <div className="col-lg-9 col-xxl-8 mx-auto">
-              <h1 className="display-1 fs-40 mx-lg-n10 mx-xl-0 mb-5">Prophetic Focus</h1>
+              <h1 className="display-1 fs-40 mx-lg-n10 mx-xl-0 mb-5">Prophetic Theme</h1>
               <Link href="#" className="btn btn-soft-leaf rounded-pill mb-4">
                 {data?.month}
               </Link>
