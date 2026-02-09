@@ -1,26 +1,25 @@
+import { usePrayerRequest } from '@/hooks/useEmail';
 import React, { useState } from 'react';
 
-
 const PrayerRequestForm = () => {
+  const { submit, success, error } = usePrayerRequest()
   const [formData, setFormData] = useState({
-    name: '',
+    first_name: '',
+    last_name: '',
     email: '',
-    phone: '',
     message: '',
     subscribe: false
   });
 
   const [errors, setErrors] = useState({});
-  const [submitted, setSubmitted] = useState(false);
 
   const handleChange = (e) => {
-    const { id, value, type, checked } = e.target;
+    const { id, value, } = e.target;
     setFormData(prev => ({
       ...prev,
-      [id]: type === 'checkbox' ? checked : value
+      [id]: value
     }));
-    
-    // Clear error when user starts typing
+
     if (errors[id]) {
       setErrors(prev => ({ ...prev, [id]: '' }));
     }
@@ -28,43 +27,50 @@ const PrayerRequestForm = () => {
 
   const validateForm = () => {
     const newErrors = {};
-    
-    if (!formData.name.trim()) {
-      newErrors.name = 'Name is required';
+
+    if (!formData.first_name.trim()) {
+      newErrors.first_name = 'First Name is required';
     }
-    
+
+    if (!formData.last_name.trim()) {
+      newErrors.last_name = 'Last Name is required';
+    }
+
     if (!formData.email.trim()) {
       newErrors.email = 'Email is required';
     } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
       newErrors.email = 'Email is invalid';
     }
-    
+
     if (!formData.message.trim()) {
       newErrors.message = 'Message is required';
     }
-    
+
     return newErrors;
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    
+
     const newErrors = validateForm();
-    
+
     if (Object.keys(newErrors).length === 0) {
-      console.log('Form submitted:', formData);
-      setSubmitted(true);
-      
-      // Reset form after 3 seconds
+
+      await submit({
+        firstName: formData.first_name,
+        lastName: formData.last_name,
+        email: formData.email,
+        message: formData.message
+      });
+
       setTimeout(() => {
         setFormData({
-          name: '',
+          first_name: '',
+          last_name: '',
           email: '',
-          phone: '',
           message: '',
           subscribe: false
         });
-        setSubmitted(false);
       }, 3000);
     } else {
       setErrors(newErrors);
@@ -86,7 +92,7 @@ const PrayerRequestForm = () => {
             </p>
           </div>
           
-          {submitted && (
+          {success && (
             <div className="alert alert-success" role="alert">
               <i className="bi bi-check-circle-fill me-2"></i>
               Thank you, {formData.name}! Your prayer request has been received. We'll be in touch soon.
@@ -94,23 +100,41 @@ const PrayerRequestForm = () => {
           )}
           
           <form onSubmit={handleSubmit}>
-            <div className="row mb-3">
-              <div className="col-md-6 mb-3 mb-md-0">
-                <label htmlFor="name" className="form-label" style={styles.formLabel}>
-                  Name <span className="text-danger">*</span>
-                </label>
-                <input
-                  type="text"
-                  className={`form-control ${errors.name ? 'is-invalid' : ''}`}
-                  id="name"
-                  placeholder="Enter your name"
-                  value={formData.name}
-                  onChange={handleChange}
-                  style={styles.formControl}
-                />
-                {errors.name && <div className="invalid-feedback">{errors.name}</div>}
+            <div className="row  mb-3 mb-md-0">
+                <div className="col-md-6">
+                  <label htmlFor="first_name" className="form-label" style={styles.formLabel}>
+                    Firstname <span className="text-danger">*</span>
+                  </label>
+                  <input
+                    type="text"
+                    className={`form-control ${errors.first_name ? 'is-invalid' : ''}`}
+                    id="first_name"
+                    placeholder="Enter your firstname"
+                    value={formData.first_name}
+                    onChange={handleChange}
+                    style={styles.formControl}
+                  />
+                  {errors.first_name && <div className="invalid-feedback">{errors.first_name}</div>}
+                </div>
+                <div className="col-md-6">
+                  <label htmlFor="last_name" className="form-label" style={styles.formLabel}>
+                    Lastname <span className="text-danger">*</span>
+                  </label>
+                  <input
+                    type="text"
+                    className={`form-control ${errors.last_name ? 'is-invalid' : ''}`}
+                    id="last_name"
+                    placeholder="Enter your lastname"
+                    value={formData.last_name}
+                    onChange={handleChange}
+                    style={styles.formControl}
+                  />
+                  {errors.last_name && <div className="invalid-feedback">{errors.last_name}</div>}
+                </div>
               </div>
-              <div className="col-md-6">
+
+            <div className='row mt-3'>
+              <div className="mb-3">
                 <label htmlFor="email" className="form-label" style={styles.formLabel}>
                   Email <span className="text-danger">*</span>
                 </label>
@@ -125,21 +149,6 @@ const PrayerRequestForm = () => {
                 />
                 {errors.email && <div className="invalid-feedback">{errors.email}</div>}
               </div>
-            </div>
-            
-            <div className="mb-3">
-              <label htmlFor="phone" className="form-label" style={styles.formLabel}>
-                Phone Number <span className="text-muted">(Optional)</span>
-              </label>
-              <input
-                type="tel"
-                className="form-control"
-                id="phone"
-                placeholder="Enter your phone number"
-                value={formData.phone}
-                onChange={handleChange}
-                style={styles.formControl}
-              />
             </div>
             
             <div className="mb-3">
