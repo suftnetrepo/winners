@@ -4616,7 +4616,7 @@ buffer@^5.2.1, buffer@^5.5.0, buffer@^5.6.0:
 
 bunyan@^1.8.15:
   version "1.8.15"
-  resolved "https://registry.npmjs.org/bunyan/-/bunyan-1.8.15.tgz"
+  resolved "https://registry.yarnpkg.com/bunyan/-/bunyan-1.8.15.tgz#8ce34ca908a17d0776576ca1b2f6cbd916e93b46"
   integrity sha512-0tECWShh6wUysgucJcBAoYegf3JJoZWibxdqhTm7OHPeT42qdjkZ29QCMcKwbgU1kiH+auSIasNRXMLWXafXig==
   optionalDependencies:
     dtrace-provider "~0.8"
