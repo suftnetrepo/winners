@@ -1,4 +1,6 @@
 
+'use client';
+
 import SocialLinks from '@/components/reuseable/SocialLinks';
 import { useSettings } from '@/hooks/useSettings';
 import { completeAddress, formatPhoneNumbers } from '@/utils/helpers';

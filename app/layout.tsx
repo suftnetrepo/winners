@@ -1,7 +1,6 @@
 'use client';
 import { usePathname } from 'next/navigation';
 import { useEffect } from 'react';
-import 'react-big-calendar/lib/css/react-big-calendar.css';
 // Bootstrap and custom scss
 import '@/assets/scss/style.scss';
 // animate css
@@ -18,7 +17,6 @@ import 'plyr-react/plyr.css';
 import 'glightbox/dist/css/glightbox.css';
 // custom scrollcue css
 import '@/plugins/scrollcue/scrollCue.css';
-import { SessionProvider } from 'next-auth/react';
 import { Providers } from './provider';
 
 function RootLayout({ children }: { children: React.ReactNode }) {
@@ -42,7 +40,6 @@ function RootLayout({ children }: { children: React.ReactNode }) {
     <html lang="en">
        <head>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
-  
       </head>
       <body>
          <Providers>
