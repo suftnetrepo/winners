@@ -1,9 +1,7 @@
 'use client';
 
 import { Fragment } from 'react';
-import { Clock1, Clock } from 'lucide-react';
 import { Footer } from '@/components/blocks/footer';
-import NextLink from '@/components/reuseable/links/NextLink';
 import PageProgress from '@/components/common/PageProgress';
 import Navbar from '@/components/blocks/navbar/Navbar';
 import Link from 'next/link';
@@ -11,8 +9,11 @@ import { useEvent } from '@/hooks/useEvents';
 import Card from '@/components/blocks/card';
 
 export default function Page() {
-
   const { data, error, loading } = useEvent()
+
+  const onRegister = (id, data) => {
+    console.log("....................", { id, data })
+  }
 
   console.log("....................", { data, error, loading })
 
@@ -62,9 +63,11 @@ export default function Page() {
             </div>
 
             <div className="row grid-view gy-6">
-              {(data?.data || []).map((item) => (
+              {loading && <p>Loading events...</p>}
+              {error && <p>Error loading events.</p>}
+              {!loading && (data?.data || []).map((item) => (
                 <div className="col-md-6 col-lg-4" key={item._id}>
-                  <Card className="card shadow-lg" {...item} />
+                  <Card className="card shadow-lg" onRegister={onRegister} {...item} />
                 </div>
               ))}
             </div>

@@ -2,7 +2,7 @@
 'use client';
 import useSWRMutation from 'swr/mutation';
 
-async function sendRequest(url, { arg }) {
+export async function sendRequest(url, { arg }) {
     const res = await fetch(url, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },

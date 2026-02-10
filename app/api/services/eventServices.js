@@ -9,3 +9,12 @@ export async function getEvents() {
         throw normalizeApiError(error);
     }
 }
+
+export async function postEvent(body) {
+    try {
+        const { data } = await api.post('/event/post', body);
+        return data;
+    } catch (error) {
+        throw normalizeApiError(error);
+    }
+}
