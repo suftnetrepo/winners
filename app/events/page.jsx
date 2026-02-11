@@ -43,7 +43,8 @@ export default function Page() {
                 <div className="col-lg-10 col-xxl-8 mx-auto">
                   <h3 className="display-4 mb-3 text-center">We Believe in Coming Together in Faith</h3>
                   <p className="lead fs-lg mb-10 text-center">
-                    No matter where you are on your journey, there’s a place for you in this program.
+                    Every moment of this event is designed to inspire, connect, and strengthen faith.
+                  Come and experience any of these gatherings.
                   </p>
                 </div>
               </div>
@@ -53,15 +54,7 @@ export default function Page() {
         <section className="wrapper">
 
           <div className="container py-15 py-md-14">
-            <div className="row mb-10">
-              <div className="col-lg-9 mx-auto text-center">
-                <p className="mb-0 fs-lg">
-                  Every moment of this event is designed to inspire, connect, and strengthen faith.
-                  Come and experience any of these gatherings.
-                </p>
-              </div>
-            </div>
-
+           
             <div className="row grid-view gy-6">
               {loading && <p>Loading events...</p>}
               {error && <p>Error loading events.</p>}

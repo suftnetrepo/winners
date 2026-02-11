@@ -27,7 +27,7 @@ const Home: NextPage = () => {
 
       <main className="content-wrapper">
         <Hero data={data?.data?.sliders} />
-        <div className=" pb-18 pt-18 bg-light">
+        <div className=" pb-12 pt-12 bg-light">
           <Tiles />
         </div>
         <Fact data={data?.data?.prophetic_focus} />

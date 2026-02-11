@@ -35,7 +35,7 @@ export default function Page() {
                 <div className="col-lg-10 col-xxl-8 mx-auto">
                   <h3 className="display-4 mb-3 text-center">Celebrate the Goodness of God</h3>
                   <p className="lead fs-lg mb-10 text-center">
-                    Read and share testimonies that reveal God's love, power, and faithfulness.
+                    Share testimonies that reveal God's love, power, and faithfulness.
                   </p>
                 </div>
               </div>
